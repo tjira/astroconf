@@ -17,7 +17,6 @@ return {
     },
 
     polish = function()
-
         vim.api.nvim_create_autocmd("VimEnter", {
             desc = 'replace alpha footer text',
             callback = function()
@@ -29,25 +28,5 @@ return {
                 })
             end
         })
-
-        vim.api.nvim_create_autocmd('User', {
-            desc = 'hide cursor for alpha',
-            pattern = 'AlphaReady',
-            callback = function()
-                local hl = vim.api.nvim_get_hl_by_name('Cursor', true); hl.blend = 100
-                vim.opt.guicursor:append('a:Cursor/lCursor')
-                vim.api.nvim_set_hl(0, 'Cursor', hl)
-            end,
-        })
-
-        vim.api.nvim_create_autocmd('BufUnload', {
-            desc = 'show cursor after alpha',
-            callback = function()
-                local hl = vim.api.nvim_get_hl_by_name('Cursor', true); hl.blend = 000
-                vim.opt.guicursor:remove('a:Cursor/lCursor')
-                vim.api.nvim_set_hl(0, 'Cursor', hl)
-            end,
-        })
-
     end
 }
