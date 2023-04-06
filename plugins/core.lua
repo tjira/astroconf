@@ -15,5 +15,12 @@ return {
             }
             return opts
         end
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = function(_, opts)
+            opts.ensure_installed = { 'bash', 'c', 'cpp', 'lua', 'markdown', 'markdown_inline', 'python', 'regex', 'vim' }
+            return opts
+        end
     }
 }
