@@ -1,3 +1,4 @@
 return {
-    "folke/tokyonight.nvim"
+    {"folke/tokyonight.nvim", lazy=false},
+    {"github/copilot.vim", lazy=false}
 }

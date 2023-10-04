@@ -24,5 +24,13 @@ return {
             opts.ensure_installed = { 'bash', 'c', 'cpp', 'lua', 'markdown', 'markdown_inline', 'python', 'regex', 'vim' }
             return opts
         end
+    },
+    {
+      "hrsh7th/nvim-cmp",
+      opts = function(_, opts)
+        opts.mapping["<S-Tab>"] = nil
+        opts.mapping["<Tab>"] = nil
+        return opts
+      end
     }
 }
