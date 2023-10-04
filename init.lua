@@ -2,6 +2,13 @@ return {
     colorscheme = "tokyonight",
 
     lsp = {
+        config = {
+          clangd = {
+            capabilities = {
+              offsetEncoding = "utf-8"
+            }
+          }
+        },
         formatting = {
             format_on_save = {
                 enabled = false
